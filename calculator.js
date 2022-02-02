@@ -23,7 +23,7 @@ for (const operator of operators) {
 
 
 equalsTo.addEventListener("click",()=>{
-const result = eval(calculation.textContent);
+const result = eval(calculation.textContent).toFixed(2);
 calculation.textContent=result
 })
 
