@@ -1,0 +1,88 @@
+*, *::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+ul{
+    
+    list-style: none;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgb(127, 247, 127);
+    color: rgb(28, 27, 27);
+    margin-bottom: .5rem;
+}
+
+li{
+    align-self: flex-end;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    outline: none;
+}
+
+
+.buttons{
+    display: grid;
+    width: 400px;
+    font-size: 2rem;
+    grid-template-columns: repeat(8,1fr);
+    gap: 4px;
+    grid-template-areas: 
+    "clear clear backspace backspace percent percent divide divide"
+    "seven seven eight eight nine nine multiplyby multiplyby"
+    "four four five five six six minus minus"
+    "one one two two three three sum sum"
+    "oopen close nzero nzero point point equalsto equalsto";
+}
+
+.operator,.number,#clear, #backspace,#equals-to{
+    font-size: inherit;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.operator, #clear, #backspace,#equals-to{
+    color: rgb(19, 146, 13);
+}
+
+.number{
+    color:rgb(46, 45, 44);
+}
+
+#clear{ grid-area: clear;}    
+#backspace{ grid-area: backspace;}    
+#percent{ grid-area: percent;}    
+#divide{ grid-area: divide;}       
+#sum{ grid-area: sum;}           
+#minus{ grid-area: minus;}    
+#multiply{ grid-area: multiplyby;}    
+#point{ grid-area: point;}       
+#open { grid-area: oopen;}    
+#close { grid-area: close;}    
+#equals-to{ grid-area: equalsto;}     
+#one{ grid-area: one;}        
+#two{ grid-area: two;}          
+#three{ grid-area: three;}        
+#four{ grid-area: four;}          
+#five{ grid-area: five;}          
+#six{ grid-area: six;}          
+#seven{ grid-area: seven;}        
+#eight{ grid-area: eight;}       
+#nine{ grid-area: nine;}         
+#zero{ grid-area: nzero;}          
+
