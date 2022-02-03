@@ -41,6 +41,7 @@ li{
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+    position: relative;
 }
 
 .calculation{
@@ -54,6 +55,14 @@ li{
     padding: 1rem;
     outline: none;
 
+}
+
+#previous{
+    position: absolute;
+    top:3px;
+    left: 3px;
+    font-size: .6rem;
+    color: rgb(150, 146, 146);
 }
 
 

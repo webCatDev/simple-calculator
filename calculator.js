@@ -5,6 +5,7 @@ const paranthesis = document.getElementById("paranthesis");
 const equalsTo = document.getElementById("equals-to");
 const backspace = document.getElementById("backspace");
 const clear = document.getElementById("clear");
+const previous = document.getElementById("previous");
 
 
 for(const number of numbers){
@@ -22,6 +23,7 @@ for (const operator of operators) {
 
 
 equalsTo.addEventListener("click",()=>{
+previous.textContent= calculation.value
 const result = eval(calculation.value).toFixed(2);
 calculation.value=result
 })
@@ -43,6 +45,7 @@ clear.addEventListener("click", () => {
 calculation.addEventListener("keydown", (e)=>{
   if(e.key==="Enter"){
     e.preventDefault()
+    previous.textContent = calculation.value;
     const result = eval(calculation.value).toFixed(2);
     calculation.value = result;
   }
