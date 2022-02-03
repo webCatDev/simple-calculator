@@ -9,42 +9,42 @@ const clear = document.getElementById("clear");
 
 for(const number of numbers){
     number.addEventListener("click", ()=>{
-        calculation.textContent+=number.value
+        calculation.value+=number.value
     })
 }
 
 
 for (const operator of operators) {
   operator.addEventListener("click", () => {
-    calculation.textContent += operator.value;
+    calculation.value += operator.value;
   });
 }
 
 
 equalsTo.addEventListener("click",()=>{
-const result = eval(calculation.textContent).toFixed(2);
-calculation.textContent=result
+const result = eval(calculation.value).toFixed(2);
+calculation.value=result
 })
 
 
 backspace.addEventListener("click", () => {
-    let text= calculation.textContent
+    let text= calculation.value
     text=text.substring(0,text.length-1)
-    calculation.textContent=text
+    calculation.value=text
  
 });
 
 clear.addEventListener("click", () => {
-  let text = calculation.textContent;
+  let text = calculation.value;
   text = "";
-  calculation.textContent = text;
+  calculation.value = text;
 });
 
 calculation.addEventListener("keydown", (e)=>{
   if(e.key==="Enter"){
     e.preventDefault()
-    const result = eval(calculation.textContent).toFixed(2);
-    calculation.textContent = result;
+    const result = eval(calculation.value).toFixed(2);
+    calculation.value = result;
   }
 })
 

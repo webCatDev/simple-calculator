@@ -11,7 +11,7 @@
 <body>
     <div class="container" id="container">
         <ul>
-            <li ><p class="calculation" id="calculation" contenteditable="true"></p></li>
+            <li ><input  class="calculation" id="calculation"oninput="this.value = this.value.replace(/[^0-9(+*/%)-.]/g, '');"></li>
         </ul>
         <div class="buttons">
             <input class="clear"       id="clear"       type="button" value="C">
