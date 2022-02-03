@@ -9,47 +9,79 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(to top, rgb(131, 143, 131), honeydew);
 }
 
 .container{
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: rgb(127, 247, 127);
     width: 80%;
-    max-width: 400px;
+    max-width: 25rem;
     display: flex;
     flex-direction: column;
-
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0px 4px 10px rgb(97, 172, 97),    inset 0px 4px 10px rgb(97, 172, 97),
+    inset -1px -1px 4px rgb(97, 172, 97);
 }
 
 ul{
-    
+    width: 100%;
     list-style: none;
-    display: flex;
-    flex-direction: column-reverse;
-    background-color: rgb(127, 247, 127);
-    color: rgb(28, 27, 27);
+    color: rgb(248, 245, 245);
     margin-bottom: .5rem;
 }
 
 li{
+    width: 100%;
+    background-image: linear-gradient(to right top,rgb(31, 33, 31),rgb(49, 49, 49),rgb(49, 51, 49)) ;
+    border-radius: 3px;
+    text-align: right;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.calculation{
     align-self: flex-end;
+    width: 100%;
     font-size: 2rem;
     font-weight: bold;
     padding: 1rem;
     outline: none;
+
 }
 
 
 .buttons{
+    padding: .8rem 0;
     display: grid;
     width: 100%;
     font-size: 2rem;
     grid-template-columns: repeat(8,1fr);
-    gap: 4px;
+    gap: .2rem;
     grid-template-areas: 
-    "clear clear backspace backspace percent percent divide divide"
-    "seven seven eight eight nine nine multiplyby multiplyby"
-    "four four five five six six minus minus"
-    "one one two two three three sum sum"
-    "oopen close nzero nzero point point equalsto equalsto";
+    "clear clear backspace backspace  percent percent  divide divide "
+    " seven seven eight eight nine nine multiplyby multiplyby"
+    " four four five five six six  minus minus          "
+    " one one two two three three  sum sum              "
+    " point point nzero nzero equalsto equalsto oopen close          ";
+}
+
+.buttons>*{
+    font-weight: bold;
+    border:inset;
+    outline: none;
+
+    background-image: linear-gradient(to left top, rgba(187, 235, 220, 0.987),rgb(180, 216, 180));
+}
+
+.buttons>*:hover{
+background-image: linear-gradient(white,white);
 }
 
 .operator,.number,#clear, #backspace,#equals-to{
@@ -88,3 +120,8 @@ li{
 #nine{ grid-area: nine;}         
 #zero{ grid-area: nzero;}          
 
+@media(max-width:768px){
+    html{
+        font-size: 80%;
+    }
+}
