@@ -38,6 +38,7 @@ backspace.addEventListener("click", () => {
 
 clear.addEventListener("click", () => {
   let text = calculation.value;
+  previous.textContent="";
   text = "";
   calculation.value = text;
 });
