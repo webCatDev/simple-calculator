@@ -30,11 +30,7 @@ equalsTo.addEventListener("click", () => {
  }
  if (Number.isSafeInteger(result)) {
    calculation.value = result;
- }else if(Number.isFinite(result)){
-      calculation.value = "";
-      previous.innerHTML = "Sayı hesaplamak için çok büyük: &#8734;";
-
- } else {
+ }else {
    result = result.toFixed(2);
    calculation.value = result;
  } 
@@ -66,10 +62,7 @@ calculation.addEventListener("keydown", (e) => {
     }
     if (Number.isSafeInteger(result)) {
       calculation.value = result;
-    } else if (Number.isFinite(result)) {
-      calculation.value = "";
-      previous.innerHTML = "Sayı hesaplamak için çok büyük: &#8734;";
-    } else {
+    }  else {
       result = result.toFixed(2);
       calculation.value = result;
     } 
